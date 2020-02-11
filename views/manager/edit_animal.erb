@@ -1,0 +1,17 @@
+<form method="post" action="/manager/animal/<%= @animal.id %>">
+
+  <label for="name">Animal Name:</label>
+  <input type="text" name="name" id="name" value="<%= @animal.name%>"/>
+
+  <label for="admission-date">Admission Date:</label>
+  <input type="text" name="admission_date" id="admission-date" value="<%= @animal.admission_date%>"/>
+
+  <label for="type">Type:</label>
+  <input type="text" name="type" id="type" value="<%= @animal.type%>"/>
+
+  <label for="species">Species:</label>
+  <input type="text" name="species" id="species" value="<%= @animal.species%>"/>
+
+  <input type="submit" value="Edit Animal">
+
+</form>

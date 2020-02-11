@@ -1,0 +1,8 @@
+<div id="all-owners-list">
+  <% @owners.each do |owner| %>
+    <div class="owner-in-list">
+      <p>Owner Name: <%= owner.name() %></p>
+      <p><a href="/owners/<%= owner.id %>">Show Owner</a></p>
+    </div>
+  <% end %>
+</div>

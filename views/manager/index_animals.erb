@@ -1,0 +1,14 @@
+<div id="all-animals-list">
+  <% @animals.each do |animal| %>
+
+    <div class="animal-in-list">
+      <p>Animal Name: <%= animal.name() %></p>
+      <p>Admission Date: <%= animal.admission_date() %></p>
+      <p>Type: <%= animal.type() %></p>
+      <p>Species: <%= animal.species() %></p>
+
+      <p><a href="/manager/animals/<%= animal.id %>">Show Animal</a></p>
+    </div>
+
+  <% end %>
+</div>

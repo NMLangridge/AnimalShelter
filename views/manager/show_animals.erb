@@ -1,0 +1,27 @@
+<div id="animal-detail"
+  <div class="animal-detail"
+
+  <p>Animal Name: <%= @animal.name %></p>
+  <p>Admission Date: <%= @animal.admission_date %></p>
+  <p>Type: <%= @animal.type %></p>
+  <p>Species: <%= @animal.species %></p>
+
+  <% for owner in @owners %>
+  <p><%= "Owner Name:" %> <%= owner.name %></p>
+  <p><a href="/manager/owners/<%= owner.id %>">Show Owner </a></p>
+  <% end %>
+
+  </div>
+</div>
+
+<form method="post" action="/manager/animal/<%= @animal.id %>/edit">
+
+  <input type="submit" value="Edit Animal"/>
+
+</form>
+
+<form method="post" action="/manager/animal/<%= @animal.id %>/delete">
+
+  <input type="submit" value="Delete Animal"/>
+
+</form>

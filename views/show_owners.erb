@@ -1,0 +1,12 @@
+<div id="owner-detail"
+  <div class="owner-detail"
+
+  <p>Owner Name: <%= @owner.name %></p>
+
+  <% for animal in @animals %>
+  <p><%= "Animal Name:" %> <%= animal.name %> </p>
+  <p><a href="/animals/<%= animal.id %>">Show Animal</a></p>
+  <% end %>
+
+  </div>
+</div>

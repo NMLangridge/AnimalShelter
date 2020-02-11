@@ -1,0 +1,17 @@
+<form action="/manager/owner/new" method="post">
+
+  <label for="name">Owner Name:</label>
+  <input type="text" name="name" id="name">
+
+  <label for="animal_id">Animal Name:</label>
+  <select name="animal_id" id="animal_id">
+
+  <% for animal in @animals %>
+    <option value="<%=animal.id%>"> <%=animal.name%> </option>
+  <% end %>
+
+  </select>
+
+  <input type="submit" value="Add Owner">
+
+</form>

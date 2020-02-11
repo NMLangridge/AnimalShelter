@@ -1,0 +1,13 @@
+<div id="animal-detail"
+  <div class="animal-detail"
+
+    <p>Animal Name: <%= @animal.name %></p>
+    <p>Admission Date: <%= @animal.admission_date %></p>
+
+    <% for owner in @owners %>
+    <p><%= "Owner Name:" %> <%= owner.name %></p>
+    <p><a href="/owners/<%= owner.id %>">Show Owner </a></p>
+    <% end %>
+
+  </div>
+</div>
