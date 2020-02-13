@@ -3,7 +3,7 @@ require_relative('../db/sql_runner.rb')
 class Animal
 
   attr_reader :id
-  attr_accessor :name, :type, :species, :admission_date
+  attr_accessor :name, :type, :species, :admission_date, :image_url
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -11,23 +11,24 @@ class Animal
     @type = options['type']
     @species = options['species']
     @admission_date = options['admission_date']
+    @image_url = options['image_url']
   end
 
   def save()
-    sql = "INSERT INTO animals(name, type, species, admission_date)
-    VALUES($1, $2, $3, $4)
+    sql = "INSERT INTO animals(name, type, species, admission_date, image_url)
+    VALUES($1, $2, $3, $4, $5)
     RETURNING id"
-    values = [@name, @type, @species, @admission_date]
+    values = [@name, @type, @species, @admission_date, @image_url]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     @id = id
   end
 
   def update()
-    sql = "UPDATE animals SET (name, type, species, admission_date)
-    = ($1, $2, $3, $4)
-    WHERE id = $5"
-    values = [@name, @type, @species, @admission_date, @id]
+    sql = "UPDATE animals SET (name, type, species, admission_date, image_url)
+    = ($1, $2, $3, $4, $5)
+    WHERE id = $6"
+    values = [@name, @type, @species, @admission_date, @id, @image_url]
     SqlRunner.run(sql, values)
   end
 

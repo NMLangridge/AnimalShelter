@@ -6,7 +6,8 @@ CREATE TABLE animals(
   name VARCHAR(255),
   type VARCHAR(255),
   species VARCHAR(255),
-  admission_date VARCHAR(255)
+  admission_date VARCHAR(255),
+  image_url VARCHAR(255)
 );
 
 CREATE TABLE owners(
