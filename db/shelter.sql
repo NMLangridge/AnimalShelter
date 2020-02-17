@@ -7,6 +7,7 @@ CREATE TABLE animals(
   type VARCHAR(255),
   species VARCHAR(255),
   admission_date VARCHAR(255),
+  available VARCHAR(255),
   image_url VARCHAR(255)
 );
 

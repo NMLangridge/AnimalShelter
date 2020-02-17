@@ -12,6 +12,20 @@
   <label for="species">Species:</label>
   <input type="text" name="species" id="species" value="<%= @animal.species%>"/>
 
+  <label for="available">Available:</label>
+
+  <select name="available" id="available" selected="<%=@animal.available %>">
+
+    <option value="Yes"
+    <%= "selected" if @animal.available == "Yes" %>
+    >Yes</option>
+
+    <option value="No"
+    <%= "selected" if @animal.available == "No" %>
+    >No</option>
+
+  </select>
+
   <input type="submit" value="Edit Animal">
 
 </form>

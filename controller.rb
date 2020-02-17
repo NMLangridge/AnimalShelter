@@ -44,7 +44,7 @@ end
 
 post '/manager/animal/:id' do
   Animal.new(params).update()
-  redirect to '/manager/artists'
+  redirect to '/manager/animals'
 end
 
 post '/manager/animal/:id/delete' do
@@ -84,7 +84,7 @@ get '/manager/owner/:id/edit' do
 end
 
 post '/manager/owner/:id' do
-  Owner.new(params).update
+  Owner.new(params).update()
   redirect to '/manager/owners'
 end
 

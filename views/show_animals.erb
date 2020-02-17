@@ -3,6 +3,9 @@
 
     <p>Animal Name: <%= @animal.name %></p>
     <p>Admission Date: <%= @animal.admission_date %></p>
+    <p>Type: <%= @animal.type %></p>
+    <p>Species: <%= @animal.species %></p>
+    <p>Available: <%= @animal.available %></p>
 
     <% for owner in @owners %>
     <p><%= "Owner Name:" %> <%= owner.name %></p>

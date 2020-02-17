@@ -10,6 +10,7 @@ animal1 = Animal.new({
   'type' => 'Cat',
   'species' => 'British Shorthair',
   'admission_date' => '01/02/2020',
+  'available' => 'No',
   'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/9/9d/Britishblue.jpg'
   })
 
@@ -18,6 +19,7 @@ animal2 = Animal.new({
   'type' => 'Dog',
   'species' => 'West Highland Terrier',
   'admission_date' => '28/02/2020',
+  'available' => 'No',
   'image_url' => 'https://upload.wikimedia.org/wikipedia/commons/a/a3/West_Highland_White_Terrier-2.jpg'
   })
 
